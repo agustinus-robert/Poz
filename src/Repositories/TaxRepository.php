@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Tax;
+use Robert\Poz\Models\Tax;
 
 trait TaxRepository
 {

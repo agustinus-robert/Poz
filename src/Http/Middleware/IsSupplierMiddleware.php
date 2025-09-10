@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Http\Middleware;
+namespace Robert\Poz\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

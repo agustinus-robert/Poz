@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
-use Modules\Poz\Models\Category;
-use Modules\Poz\Models\Brand;
+use Robert\Poz\Models\Category;
+use Robert\Poz\Models\Brand;
 
 
 
@@ -37,10 +37,10 @@ class PosModals extends Component
             return;
         }
 
-        \Modules\Poz\Models\Brand::query()->update(['is_shortcut' => 0]);
+        \Robert\Poz\Models\Brand::query()->update(['is_shortcut' => 0]);
 
         foreach ($this->checkboxShortcut as $value) {
-            $brand = \Modules\Poz\Models\Brand::find($value);
+            $brand = \Robert\Poz\Models\Brand::find($value);
             if ($brand) {
                 $brand->is_shortcut = 1;
                 $brand->save();

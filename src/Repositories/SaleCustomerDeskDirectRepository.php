@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Brand;
+use Robert\Poz\Models\Brand;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Models\SaleDirectCustomerDesk;
+use Robert\Poz\Models\SaleDirectCustomerDesk;
 
 trait SaleCustomerDeskDirectRepository
 {

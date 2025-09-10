@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\SaleItems;
-use Modules\Poz\Models\PurchaseItems;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\SupplierSchedule;
-use Modules\Poz\Models\CashRegister;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\SaleItems;
+use Robert\Poz\Models\PurchaseItems;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\CashRegister;
 use Illuminate\Support\Facades\DB;
 
 trait SaleRepository
@@ -109,7 +109,7 @@ trait SaleRepository
                             'product_id' => $value['id'],
                             'supplier_id' => $supplier->supplier->id,
                             'stockable_id' => $sale->id,
-                            'stockable_type' => \Modules\Poz\Models\Sale::class,
+                            'stockable_type' => \Robert\Poz\Models\Sale::class,
                             'status' => 'minus',
                             'grand_total' => (productItem($value['id'])->price * $value['qty']),
                             'wholesale' => productItem($value['id'])->wholesale,

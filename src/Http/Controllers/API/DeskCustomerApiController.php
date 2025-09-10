@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\SaleDirectCustomerDesk;
-use Modules\Poz\Repositories\SaleCustomerDeskDirectRepository;
+use Robert\Poz\Models\SaleDirectCustomerDesk;
+use Robert\Poz\Repositories\SaleCustomerDeskDirectRepository;
 use Modules\Account\Models\UserToken;
 use Illuminate\Http\Request;
 

@@ -1,18 +1,18 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Warehouse;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Warehouse;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Repositories\TransferRepository;
-use Modules\Poz\Models\Transfer as TransferData;
-use Modules\Poz\Models\TransferItems as TransferItemsData;
-use Modules\Poz\Models\PurchaseItems;
+use Robert\Poz\Repositories\TransferRepository;
+use Robert\Poz\Models\Transfer as TransferData;
+use Robert\Poz\Models\TransferItems as TransferItemsData;
+use Robert\Poz\Models\PurchaseItems;
 use DB;
 
 class Transfer extends Component

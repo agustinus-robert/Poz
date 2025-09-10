@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
@@ -8,8 +8,8 @@ use Modules\Auth\Events\SignedUp;
 use Modules\Account\Models\User;
 use Modules\Account\Models\UserRole;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Models\UserOutlet;
-use Modules\Poz\Models\Outlet;
+use Robert\Poz\Models\UserOutlet;
+use Robert\Poz\Models\Outlet;
 use DB;
 
 trait CasierRepository

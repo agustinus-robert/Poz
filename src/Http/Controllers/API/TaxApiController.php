@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Tax;
-use Modules\Poz\Repositories\TaxDirectRepository;
+use Robert\Poz\Models\Tax;
+use Robert\Poz\Repositories\TaxDirectRepository;
 use Illuminate\Http\Request;
 
 class TaxApiController extends Controller

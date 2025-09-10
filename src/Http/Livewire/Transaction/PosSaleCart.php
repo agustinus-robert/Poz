@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
 

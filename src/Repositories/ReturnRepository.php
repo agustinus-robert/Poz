@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\ReturnGoods;
-use Modules\Poz\Models\ReturnGoodsItems;
+use Robert\Poz\Models\ReturnGoods;
+use Robert\Poz\Models\ReturnGoodsItems;
 use DB;
 
 trait ReturnRepository

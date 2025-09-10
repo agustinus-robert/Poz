@@ -1,18 +1,18 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Supplier;
-use Modules\Poz\Models\Warehouse;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Supplier;
+use Robert\Poz\Models\Warehouse;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
-use Modules\Poz\Repositories\PurchaseRepository;
-use Modules\Poz\Models\Purchase as PurchaseData;
-use Modules\Poz\Models\PurchaseItems as PurchaseItemsData;
+use Robert\Poz\Repositories\PurchaseRepository;
+use Robert\Poz\Models\Purchase as PurchaseData;
+use Robert\Poz\Models\PurchaseItems as PurchaseItemsData;
 use DB;
 
 class Purchase extends Component

@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Models;
+namespace Robert\Poz\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

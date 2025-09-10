@@ -3,8 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Http\Middleware\IsPozMiddleware;
-use Modules\Poz\Http\Middleware\IsSupplierMiddleware;
+use Robert\Poz\Http\Middleware\IsPozMiddleware;
+use Robert\Poz\Http\Middleware\IsSupplierMiddleware;
 
 Route::middleware('auth', IsSupplierMiddleware::class)->group(function () {
     Route::get('/supplier/dashboard', 'SupplierPosDashboardController@index')->name('supplier.dashboard');

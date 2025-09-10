@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Master;
+namespace Robert\Poz\Http\Livewire\Master;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Brand as BrandData;
+use Robert\Poz\Models\Brand as BrandData;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\BrandStoreRequest;
-use Modules\Poz\Repositories\BrandRepository;
+use Robert\Poz\Http\Requests\BrandStoreRequest;
+use Robert\Poz\Repositories\BrandRepository;
 use DB;
 
 class Brand extends Component

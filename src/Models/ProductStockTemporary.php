@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Models;
+namespace Robert\Poz\Models;
 
 use App\Models\Traits\Restorable\Restorable;
 use Illuminate\Database\Eloquent\Model;
@@ -56,7 +56,7 @@ class ProductStockTemporary extends Model
 
     public function product()
     {
-        return $this->belongsTo(\Modules\Poz\Models\Product::class, 'product_id', 'id');
+        return $this->belongsTo(\Robert\Poz\Models\Product::class, 'product_id', 'id');
     }
 
     public function stockable()

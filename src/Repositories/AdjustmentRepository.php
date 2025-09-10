@@ -1,14 +1,14 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Adjustment;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\ProductStockTemporary;
+use Robert\Poz\Models\Adjustment;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\ProductStockTemporary;
 
-use Modules\Poz\Models\Product;
+use Robert\Poz\Models\Product;
 use Illuminate\Support\Str;
 
 trait AdjustmentRepository
@@ -51,7 +51,7 @@ trait AdjustmentRepository
                     'product_id' => $data['product_id'],
                     'supplier_id' => $data['supplier_id'],
                     'stockable_id' => $adjustment->id,
-                    'stockable_type' => \Modules\Poz\Models\Adjustment::class,
+                    'stockable_type' => \Robert\Poz\Models\Adjustment::class,
                     'status' => $data['status'],
                     'grand_total' => (Product::find($data['product_id'])->wholesale * $data['qty']),
                     'wholesale' => Product::find($data['product_id'])->wholesale,

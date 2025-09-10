@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
-use Modules\Poz\Models\Supplier;
+use Robert\Poz\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Models\Casier;
+use Robert\Poz\Models\Casier;
 
 class SupplierApiController extends Controller
 {

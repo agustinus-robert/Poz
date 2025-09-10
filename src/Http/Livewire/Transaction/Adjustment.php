@@ -1,17 +1,17 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Supplier;
-use Modules\Poz\Models\SupplierSchedule;
-use Modules\Poz\Models\Adjustment as Adj;
-use Modules\Poz\Models\PurchaseItems;
-use Modules\Poz\Repositories\AdjustmentRepository;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Supplier;
+use Robert\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\Adjustment as Adj;
+use Robert\Poz\Models\PurchaseItems;
+use Robert\Poz\Repositories\AdjustmentRepository;
 use Livewire\Attributes\On;
 use DB;
 

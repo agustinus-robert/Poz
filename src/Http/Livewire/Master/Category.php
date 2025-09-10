@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Master;
+namespace Robert\Poz\Http\Livewire\Master;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Category as CategoryData;
+use Robert\Poz\Models\Category as CategoryData;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\CategoryStoreRequest;
-use Modules\Poz\Repositories\CategoryRepository;
+use Robert\Poz\Http\Requests\CategoryStoreRequest;
+use Robert\Poz\Repositories\CategoryRepository;
 use DB;
 
 class Category extends Component

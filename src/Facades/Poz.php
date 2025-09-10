@@ -1,6 +1,6 @@
 <?php
 
-namespace Poz\Facades;
+namespace Robert\Poz\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,20 +1,20 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Product as ProductData;
-use Modules\Poz\Models\Brand;
-use Modules\Poz\Models\Category;
-use Modules\Poz\Models\Tax;
-use Modules\Poz\Models\Unit;
-use Modules\Poz\Models\Supplier;
+use Robert\Poz\Models\Product as ProductData;
+use Robert\Poz\Models\Brand;
+use Robert\Poz\Models\Category;
+use Robert\Poz\Models\Tax;
+use Robert\Poz\Models\Unit;
+use Robert\Poz\Models\Supplier;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\ProductStoreRequest;
-use Modules\Poz\Repositories\ProductRepository;
+use Robert\Poz\Http\Requests\ProductStoreRequest;
+use Robert\Poz\Repositories\ProductRepository;
 use Illuminate\Support\Facades\Auth;
 use Modules\Account\Models\User;
 use DB;

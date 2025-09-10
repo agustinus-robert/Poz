@@ -1,17 +1,17 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\SaleDirect;
-use Modules\Poz\Models\SaleDirectItems;
-use Modules\Poz\Repositories\SaleDirectRepository;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\SaleDirectCart;
-use Modules\Poz\Models\Adjustment;
-use Modules\Poz\Models\Sale;
+use Robert\Poz\Models\SaleDirect;
+use Robert\Poz\Models\SaleDirectItems;
+use Robert\Poz\Repositories\SaleDirectRepository;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\SaleDirectCart;
+use Robert\Poz\Models\Adjustment;
+use Robert\Poz\Models\Sale;
 use Modules\Account\Models\UserToken;
 use Illuminate\Http\Request;
 

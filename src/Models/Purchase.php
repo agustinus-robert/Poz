@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Models;
+namespace Robert\Poz\Models;
 
 use App\Models\Traits\Restorable\Restorable;
 use Illuminate\Database\Eloquent\Model;

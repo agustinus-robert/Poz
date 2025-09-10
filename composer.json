@@ -4,16 +4,17 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Poz\\": "src/"
+            "Robert\\Poz\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Poz\\PozServiceProvider"
+                "Robert\\Poz\\PozServiceProvider",
+                "Robert\\Poz\\PozServiceLoader"
             ],
             "aliases": {
-                "Poz": "Poz\\Facades\\Poz"
+                "Poz": "Robert\\Poz\\Facades\\Poz"
             }
         }
     },

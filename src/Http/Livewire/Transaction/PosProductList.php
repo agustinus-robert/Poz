@@ -1,14 +1,14 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Category;
-use Modules\Poz\Models\Brand;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Category;
+use Robert\Poz\Models\Brand;
 use Livewire\Attributes\On;
-use Modules\Poz\Http\Livewire\Traits\ProductManageTrait;
+use Robert\Poz\Http\Livewire\Traits\ProductManageTrait;
 
 class PosProductList extends Component
 {

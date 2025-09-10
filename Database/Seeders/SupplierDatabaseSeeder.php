@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Poz\Database\Seeders;
+namespace Robert\Poz\Database\Seeders;
 
 use Modules\Account\Models\User;
 use Illuminate\Database\Seeder;
-use Modules\Poz\Models\Supplier;
+use Robert\Poz\Models\Supplier;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;

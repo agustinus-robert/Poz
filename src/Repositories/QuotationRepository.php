@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\ProductQuotation;
-use Modules\Poz\Models\ProductQuotationItems;
+use Robert\Poz\Models\ProductQuotation;
+use Robert\Poz\Models\ProductQuotationItems;
 use Illuminate\Support\Str;
 
 trait QuotationRepository

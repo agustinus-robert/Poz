@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\PurchaseItems;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\PurchaseItems;
 use DB;
 
 trait PurchaseRepository
@@ -64,7 +64,7 @@ trait PurchaseRepository
                         'product_id' => $value['id'],
                         'supplier_id' => $invoice['supplier_id'],
                         'stockable_id' => $purchase->id,
-                        'stockable_type' => \Modules\Poz\Models\Purchase::class,
+                        'stockable_type' => \Robert\Poz\Models\Purchase::class,
                         'status' => 'plus',
                         'grand_total' => (productItem($value['id'])->price * $value['qty']),
                         'wholesale' => productItem($value['id'])->wholesale,

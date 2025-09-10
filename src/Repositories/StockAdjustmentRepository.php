@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Adjustment;
-use Modules\Poz\Models\Casier;
-use Modules\Poz\Models\Supplier;
-use Modules\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Adjustment;
+use Robert\Poz\Models\Casier;
+use Robert\Poz\Models\Supplier;
+use Robert\Poz\Models\SupplierSchedule;
 use Modules\Core\Enums\SupplierWorkEnum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -72,7 +72,7 @@ trait StockAdjustmentRepository
             ProductStock::create([
                 'product_id' => $id,
                 'supplier_id' => $supplier_id,
-                'stockable_type' => \Modules\Poz\Models\Adjustment::class,
+                'stockable_type' => \Robert\Poz\Models\Adjustment::class,
                 'stockable_id' => $adjustment->id,
                 'qty' => $qty,
                 'grand_total' => ($buyOn * $qty),

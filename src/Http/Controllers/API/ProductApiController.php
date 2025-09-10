@@ -1,25 +1,25 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Supplier;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\SupplierSchedule;
-use Modules\Poz\Models\PurchaseItems;
-use Modules\Poz\Models\SaleDirect;
-use Modules\Poz\Models\Adjustment;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\Brand;
-use Modules\Poz\Models\Category;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Supplier;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\PurchaseItems;
+use Robert\Poz\Models\SaleDirect;
+use Robert\Poz\Models\Adjustment;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\Brand;
+use Robert\Poz\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Models\Casier;
-use Modules\Poz\Models\SaleDirectCart;
+use Robert\Poz\Models\Casier;
+use Robert\Poz\Models\SaleDirectCart;
 
 class ProductApiController extends Controller
 {
@@ -267,7 +267,7 @@ class ProductApiController extends Controller
                     'product_id' => $product->id,
                     'supplier_id' => $request->supplier_id,
                     'stockable_id' => $purchase->id,
-                    'stockable_type' => \Modules\Poz\Models\Purchase::class,
+                    'stockable_type' => \Robert\Poz\Models\Purchase::class,
                     'status' => 'plus',
                     'grand_total' => ($request->wholesale * $request->qty),
                     'wholesale' => $request->wholesale,
@@ -362,7 +362,7 @@ class ProductApiController extends Controller
             //     $dataStock = [
             //         'product_id' => $productId,
             //         'supplier_id' => $supplierId,
-            //         'stockable_type' => \Modules\Poz\Models\Purchase::class,
+            //         'stockable_type' => \Robert\Poz\Models\Purchase::class,
             //         'stockable_id' => null,
             //         'created_by' => $casier->user_id
             //     ];

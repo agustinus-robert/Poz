@@ -1,16 +1,16 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Supplierz;
+namespace Robert\Poz\Http\Livewire\Supplierz;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
-use Modules\Poz\Models\ProductQuotation;
-use Modules\Poz\Repositories\QuotationRepository;
-use Modules\Poz\Http\Requests\QuotationStoreRequest;
+use Robert\Poz\Models\ProductQuotation;
+use Robert\Poz\Repositories\QuotationRepository;
+use Robert\Poz\Http\Requests\QuotationStoreRequest;
 use Livewire\Attributes\On;
-use Modules\Poz\Models\Outlet;
+use Robert\Poz\Models\Outlet;
 use DB;
 
 class QuotationSupplier extends Component

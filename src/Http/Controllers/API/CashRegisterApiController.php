@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\CashRegister;
-use Modules\Poz\Repositories\CashRepository;
+use Robert\Poz\Models\CashRegister;
+use Robert\Poz\Repositories\CashRepository;
 use Modules\Account\Models\UserToken;
 use Illuminate\Http\Request;
 

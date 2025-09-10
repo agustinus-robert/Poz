@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Datatables;
+namespace Robert\Poz\Http\Livewire\Datatables;
 
-use Modules\Poz\DataTables\CustomDatatables;
+use Robert\Poz\DataTables\CustomDatatables;
 use Yajra\DataTables\Html\Builder;
 use Illuminate\Http\Request;
 use Livewire\Component;

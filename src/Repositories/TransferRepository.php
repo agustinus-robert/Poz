@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Transfer;
-use Modules\Poz\Models\TransferItems;
-use Modules\Poz\Models\PurchaseItems;
+use Robert\Poz\Models\Transfer;
+use Robert\Poz\Models\TransferItems;
+use Robert\Poz\Models\PurchaseItems;
 use DB;
 
 trait TransferRepository

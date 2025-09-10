@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Poz\DataTables;
+namespace Robert\Poz\DataTables;
 
-use Modules\Admin\Models\Post;
+use Robert\Admin\Models\Post;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;

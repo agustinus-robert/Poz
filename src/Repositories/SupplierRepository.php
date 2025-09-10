@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Supplier;
+use Robert\Poz\Models\Supplier;
 use Illuminate\Support\Str;
 use Modules\Account\Models\User;
 use App\Models\Team;

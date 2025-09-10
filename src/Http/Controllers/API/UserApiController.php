@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
 
@@ -12,8 +12,8 @@ use Modules\Auth\Http\Requests\SignIn\StoreRequest;
 use Modules\Account\Models\User;
 use Modules\Account\Models\UserRole;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Models\UserOutlet;
-use Modules\Poz\Models\Outlet;
+use Robert\Poz\Models\UserOutlet;
+use Robert\Poz\Models\Outlet;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -24,7 +24,7 @@ class UserApiController extends Controller
         $request->ensureIsNotRateLimited();
 
         $credentials = $request->only('username', 'password');
-        $user = \Modules\Account\Models\User::where('username', $credentials['username'])->first();
+        $user = \Robert\Account\Models\User::where('username', $credentials['username'])->first();
 
         if (!$user || !Hash::check($credentials['password'], $user->password)) {
 

@@ -1,17 +1,17 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
-use Modules\Poz\Models\SaleDirectCart;
-use Modules\Poz\Models\SaleDirectCustomerDesk;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\SaleDirect;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\Adjustment;
+use Robert\Poz\Models\SaleDirectCart;
+use Robert\Poz\Models\SaleDirectCustomerDesk;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\SaleDirect;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\Adjustment;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Repositories\SaleDirectCartRepository;
-use Modules\Poz\Models\ProductStock;
+use Robert\Poz\Repositories\SaleDirectCartRepository;
+use Robert\Poz\Models\ProductStock;
 
 use Illuminate\Http\Request;
 

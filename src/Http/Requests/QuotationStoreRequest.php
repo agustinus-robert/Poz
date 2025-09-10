@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Http\Requests;
+namespace Robert\Poz\Http\Requests;
 
 use Auth;
 use App\Http\Requests\FormRequest;

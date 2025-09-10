@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Traits;
+namespace Robert\Poz\Http\Livewire\Traits;
 
-use Modules\Poz\Models\Product;
+use Robert\Poz\Models\Product;
 
 trait ProductManageTrait
 {

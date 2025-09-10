@@ -1,16 +1,16 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\ReturnGoods as Rgoods;
-use Modules\Poz\Models\ReturnGoodsItems;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\ReturnGoods as Rgoods;
+use Robert\Poz\Models\ReturnGoodsItems;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Repositories\ReturnRepository;
+use Robert\Poz\Repositories\ReturnRepository;
 use DB;
 
 class ReturnGoods extends Component

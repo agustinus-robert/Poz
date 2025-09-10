@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Providers;
+namespace Robert\Poz\Providers;
 
 use App\Models\Position;
 use Illuminate\Support\Facades\Blade;

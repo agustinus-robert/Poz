@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\Casier;
-use Modules\Poz\Models\SupplierSchedule;
-use Modules\Poz\Models\PurchaseItems;
-use Modules\Poz\Models\ProductStock;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\Casier;
+use Robert\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\PurchaseItems;
+use Robert\Poz\Models\ProductStock;
 
 trait ProductRepository
 {
@@ -87,7 +87,7 @@ trait ProductRepository
                     'product_id' => $product->id,
                     'supplier_id' => $sch['supplier'],
                     'stockable_id' => $purchase->id,
-                    'stockable_type' => \Modules\Poz\Models\Purchase::class,
+                    'stockable_type' => \Robert\Poz\Models\Purchase::class,
                     'status' => 'plus',
                     'grand_total' => ($data['wholesale'] * $sch['qty']),
                     'wholesale' => $data['wholesale'],

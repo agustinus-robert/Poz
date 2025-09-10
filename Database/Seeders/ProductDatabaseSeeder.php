@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Database\Seeders;
+namespace Robert\Poz\Database\Seeders;
 
 use Modules\Account\Models\User;
 use Illuminate\Database\Seeder;

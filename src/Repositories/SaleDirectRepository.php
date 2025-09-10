@@ -1,21 +1,21 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\PurchaseItems;
-use Modules\Poz\Models\SaleDirect;
-use Modules\Poz\Models\SaleDirectItems;
-use Modules\Poz\Models\SaleDirectCart;
-use Modules\Poz\Models\SaleDirectCustomerDesk;
+use Robert\Poz\Models\PurchaseItems;
+use Robert\Poz\Models\SaleDirect;
+use Robert\Poz\Models\SaleDirectItems;
+use Robert\Poz\Models\SaleDirectCart;
+use Robert\Poz\Models\SaleDirectCustomerDesk;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Models\CashRegister;
-use Modules\Poz\Models\CashHistoryRegister;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Supplier;
-use Modules\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\CashRegister;
+use Robert\Poz\Models\CashHistoryRegister;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Supplier;
+use Robert\Poz\Models\SupplierSchedule;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -255,7 +255,7 @@ trait SaleDirectRepository
                         ProductStock::create([
                             'product_id' => $value['product_id'],
                             'supplier_id' => $supplier->supplier->id,
-                            'stockable_type' => \Modules\Poz\Models\SaleDirect::class,
+                            'stockable_type' => \Robert\Poz\Models\SaleDirect::class,
                             'stockable_item' => $sale->id,
                             'grand_total' => (productItem($value['product_id'])->price * $value->qty),
                             'status' => 'minus',
@@ -557,7 +557,7 @@ trait SaleDirectRepository
                             ProductStock::create([
                                 'product_id' => $dtsale->product_id,
                                 'supplier_id' => $supplier->supplier->id,
-                                'stockable_type' => \Modules\Poz\Models\SaleDirect::class,
+                                'stockable_type' => \Robert\Poz\Models\SaleDirect::class,
                                 'stockable_id' => $id,
                                 'status' => 'minus',
                                 'qty' => $dtsale->qty,

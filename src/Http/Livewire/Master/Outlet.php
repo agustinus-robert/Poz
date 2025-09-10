@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Master;
+namespace Robert\Poz\Http\Livewire\Master;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Outlet as OutletData;
+use Robert\Poz\Models\Outlet as OutletData;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\OutletStoreRequest;
-use Modules\Poz\Repositories\OutletRepository;
+use Robert\Poz\Http\Requests\OutletStoreRequest;
+use Robert\Poz\Repositories\OutletRepository;
 use Illuminate\Support\Facades\Auth;
 use DB;
 

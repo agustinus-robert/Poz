@@ -1,25 +1,25 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Transaction;
+namespace Robert\Poz\Http\Livewire\Transaction;
 
 use Livewire\Component;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\SaleDirectCart;
-use Modules\Poz\Models\Sale;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\SaleDirectCart;
+use Robert\Poz\Models\Sale;
 use Illuminate\Support\Facades\DB;
-use Modules\Poz\Models\Brand;
+use Robert\Poz\Models\Brand;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Sale as SaleData;
-use Modules\Poz\Models\Product;
+use Robert\Poz\Models\Sale as SaleData;
+use Robert\Poz\Models\Product;
 use Modules\Academic\Models\Student;
 use Livewire\Attributes\On;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Repositories\SaleRepository;
+use Robert\Poz\Repositories\SaleRepository;
 use Livewire\WithFileUploads;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\CashRegister;
-use Modules\Poz\Http\Livewire\Traits\ProductManageTrait;
+use Robert\Poz\Models\CashRegister;
+use Robert\Poz\Http\Livewire\Traits\ProductManageTrait;
 
 class PosOrderSummary extends Component
 {
@@ -304,8 +304,8 @@ class PosOrderSummary extends Component
 
         $stockIn = ProductStock::where('product_id', $itemId)
             ->whereIn('stockable_type', [
-                \Modules\Poz\Models\Purchase::class,
-                \Modules\Poz\Models\Adjustment::class,
+                \Robert\Poz\Models\Purchase::class,
+                \Robert\Poz\Models\Adjustment::class,
             ])
             ->where('status', 'plus')
             ->whereDate('created_at', $today)
@@ -313,9 +313,9 @@ class PosOrderSummary extends Component
 
         $stockOut = ProductStock::where('product_id', $itemId)
             ->whereIn('stockable_type', [
-                \Modules\Poz\Models\SaleDirect::class,
-                \Modules\Poz\Models\Sale::class,
-                \Modules\Poz\Models\Adjustment::class,
+                \Robert\Poz\Models\SaleDirect::class,
+                \Robert\Poz\Models\Sale::class,
+                \Robert\Poz\Models\Adjustment::class,
             ])
             ->where('status', 'minus')
             ->whereDate('created_at', $today)
@@ -546,7 +546,7 @@ class PosOrderSummary extends Component
         }
 
         DB::transaction(function() use ($student_id, &$queueTemp, &$queueTempNot) {
-            $existingSales = \Modules\Poz\Models\Sale::where('student_id', $student_id)
+            $existingSales = \Robert\Poz\Models\Sale::where('student_id', $student_id)
                                 ->where('sale_status', 1)
                                 ->get();
 
@@ -559,7 +559,7 @@ class PosOrderSummary extends Component
                 }
             }
 
-            $existingNotSales = \Modules\Poz\Models\Sale::where('student_id', '!=', $student_id)
+            $existingNotSales = \Robert\Poz\Models\Sale::where('student_id', '!=', $student_id)
                                 ->where('sale_status', 1)
                                 ->get();
 

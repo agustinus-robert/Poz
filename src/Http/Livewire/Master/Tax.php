@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Master;
+namespace Robert\Poz\Http\Livewire\Master;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Tax as TaxData;
+use Robert\Poz\Models\Tax as TaxData;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\TaxStoreRequest;
-use Modules\Poz\Repositories\TaxRepository;
+use Robert\Poz\Http\Requests\TaxStoreRequest;
+use Robert\Poz\Repositories\TaxRepository;
 use DB;
 
 class Tax extends Component

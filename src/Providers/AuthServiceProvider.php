@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Providers;
+namespace Robert\Poz\Providers;
 
 use Modules\Admin\Models;
 use Modules\Admin\Policies;
@@ -35,7 +35,7 @@ class AuthServiceProvider extends ServiceProvider
             if ($employee && $employee->contract && $employee->contract->position && $employee->contract->position->position) {
                 $positionType = $employee->contract->position->position->type;
 
-                if ($positionType === \Modules\Core\Enums\PositionTypeEnum::KASIRTOKO) {
+                if ($positionType === \Robert\Core\Enums\PositionTypeEnum::KASIRTOKO) {
                     return true;
                 }
             }
@@ -50,7 +50,7 @@ class AuthServiceProvider extends ServiceProvider
             if ($employee && $employee->contract) {
                 $positionType = $employee->position->position->type;
 
-                if ($positionType === \Modules\Core\Enums\PositionTypeEnum::SUPPLIER) {
+                if ($positionType === \Robert\Core\Enums\PositionTypeEnum::SUPPLIER) {
                     return true;
                 }
             }

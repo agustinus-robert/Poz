@@ -1,20 +1,20 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\API;
+namespace Robert\Poz\Http\Controllers\API;
 
 use Modules\Reference\Http\Controllers\Controller;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\SaleDirect;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Adjustment;
-use Modules\Poz\Models\ProductStock;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\SaleDirect;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Adjustment;
+use Robert\Poz\Models\ProductStock;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Modules\Account\Models\UserToken;
-use Modules\Poz\Models\SupplierSchedule;
-use Modules\Poz\Repositories\StockAdjustmentRepository;
-use Modules\Poz\Models\Casier;
+use Robert\Poz\Models\SupplierSchedule;
+use Robert\Poz\Repositories\StockAdjustmentRepository;
+use Robert\Poz\Models\Casier;
 use Carbon\Carbon;
 use Modules\Core\Enums\SupplierWorkEnum;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Poz\Repositories;
+namespace Robert\Poz\Repositories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Category;
+use Robert\Poz\Models\Category;
 use Illuminate\Support\Str;
 
 

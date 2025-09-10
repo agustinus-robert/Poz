@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Master;
+namespace Robert\Poz\Http\Livewire\Master;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Warehouse as WarehouseData;
+use Robert\Poz\Models\Warehouse as WarehouseData;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\WarehouseStoreRequest;
-use Modules\Poz\Repositories\WarehouseRepository;
+use Robert\Poz\Http\Requests\WarehouseStoreRequest;
+use Robert\Poz\Repositories\WarehouseRepository;
 use DB;
 
 class Warehouse extends Component

@@ -1,16 +1,16 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Master;
+namespace Robert\Poz\Http\Livewire\Master;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Modules\Account\Models\User as UserData;
-use Modules\Poz\Models\Outlet;
+use Robert\Poz\Models\Outlet;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\CasierStoreRequest;
-use Modules\Poz\Repositories\CasierRepository;
+use Robert\Poz\Http\Requests\CasierStoreRequest;
+use Robert\Poz\Repositories\CasierRepository;
 use DB;
 
 class Casier extends Component

@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Poz\Http\Livewire\Master;
+namespace Robert\Poz\Http\Livewire\Master;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Supplier as SupplierData;
+use Robert\Poz\Models\Supplier as SupplierData;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-use Modules\Poz\Http\Requests\SupplierStoreRequest;
-use Modules\Poz\Repositories\SupplierRepository;
+use Robert\Poz\Http\Requests\SupplierStoreRequest;
+use Robert\Poz\Repositories\SupplierRepository;
 use DB;
 
 class Supplier extends Component

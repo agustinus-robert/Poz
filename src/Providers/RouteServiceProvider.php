@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Providers;
+namespace Robert\Poz\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
