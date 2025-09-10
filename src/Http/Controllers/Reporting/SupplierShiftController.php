@@ -1,18 +1,18 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Reporting;
+namespace Robert\Poz\Http\Controllers\Reporting;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Product;
+use Robert\Poz\Models\Product;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Adjustment;
+use Robert\Poz\Models\Adjustment;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\SupplierSchedule;
 use Carbon\Carbon;
-use Modules\Poz\Models\SaleDirect;
+use Robert\Poz\Models\SaleDirect;
 
 class SupplierShiftController extends Controller
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Schedule;
+namespace Robert\Poz\Http\Controllers\Schedule;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Product;
+use Robert\Poz\Models\Product;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Supplier;
-use Modules\Poz\Models\Adjustment;
+use Robert\Poz\Models\Supplier;
+use Robert\Poz\Models\Adjustment;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\SaleDirect;
-use Modules\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\SaleDirect;
+use Robert\Poz\Models\SupplierSchedule;
 use DB;
 
 class SupplierScheduleController extends Controller

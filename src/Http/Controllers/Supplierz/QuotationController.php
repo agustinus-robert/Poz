@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Supplierz;
+namespace Robert\Poz\Http\Controllers\Supplierz;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\ProductQuotation;
+use Robert\Poz\Models\ProductQuotation;
 use Illuminate\Http\Request;
 
 class QuotationController extends Controller

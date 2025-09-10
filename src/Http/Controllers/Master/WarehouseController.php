@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Master;
+namespace Robert\Poz\Http\Controllers\Master;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Unit;
-use Modules\Poz\Models\Warehouse;
+use Robert\Poz\Models\Unit;
+use Robert\Poz\Models\Warehouse;
 use Illuminate\Http\Request;
 
 class WarehouseController extends Controller

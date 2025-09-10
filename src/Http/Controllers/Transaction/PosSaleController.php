@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Transaction;
+namespace Robert\Poz\Http\Controllers\Transaction;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Brand;
-use Modules\Poz\Models\Category;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Brand;
+use Robert\Poz\Models\Category;
 use Illuminate\Http\Request;
 
 class PosSaleController extends Controller

@@ -1,20 +1,20 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Supplierz\Reporting;
+namespace Robert\Poz\Http\Controllers\Supplierz\Reporting;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Product;
-use Modules\Poz\Models\Supplier;
+use Robert\Poz\Models\Product;
+use Robert\Poz\Models\Supplier;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\Adjustment;
+use Robert\Poz\Models\Adjustment;
 use Illuminate\Support\Facades\Auth;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\Sale;
-use Modules\Poz\Models\SupplierSchedule;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\Sale;
+use Robert\Poz\Models\SupplierSchedule;
 use Carbon\Carbon;
-use Modules\Poz\Models\SaleDirect;
+use Robert\Poz\Models\SaleDirect;
 
 class ProductReportingController extends Controller
 {

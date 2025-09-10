@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Master;
+namespace Robert\Poz\Http\Controllers\Master;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Account\Models\User;
-use Modules\Poz\Models\Outlet;
+use Robert\Account\Models\User;
+use Robert\Poz\Models\Outlet;
 use Illuminate\Http\Request;
 
 class CasierController extends Controller

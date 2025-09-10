@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Supplierz;
+namespace Robert\Poz\Http\Controllers\Supplierz;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Adjustment;
-use Modules\Poz\Models\Supplier;
+use Robert\Poz\Models\Adjustment;
+use Robert\Poz\Models\Supplier;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

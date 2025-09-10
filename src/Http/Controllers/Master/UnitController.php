@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers\Master;
+namespace Robert\Poz\Http\Controllers\Master;
 
 use Modules\Reference\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables as Table;
-use Modules\Poz\Models\Unit;
+use Robert\Poz\Models\Unit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
