@@ -29,8 +29,6 @@ class PozServiceLoader extends ServiceProvider
      */
     public function boot(Router $router, Filesystem $filesystem)
     {
-        $this->registerPolicies();
-
         // TBC: BS or TW mode, setting on config
         $this->loadViewsFrom(__DIR__.'/../src/Resources/views', 'view-poz');
         $this->loadMigrationsFrom(__DIR__.'/../Database/migrations');
