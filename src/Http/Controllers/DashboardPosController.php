@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers;
+namespace Robert\Poz\Http\Controllers;
 
-use Modules\Poz\Models\ProductStock;
-use Modules\Poz\Models\Purchase;
-use Modules\Poz\Models\Sale;
+use Robert\Poz\Models\ProductStock;
+use Robert\Poz\Models\Purchase;
+use Robert\Poz\Models\Sale;
 use Illuminate\Http\Request;
-use Modules\Poz\Models\SaleDirect;
-use Modules\Poz\Models\Adjustment;
+use Robert\Poz\Models\SaleDirect;
+use Robert\Poz\Models\Adjustment;
 use Modules\Reference\Http\Controllers\Controller;
 
 class DashboardPosController extends Controller

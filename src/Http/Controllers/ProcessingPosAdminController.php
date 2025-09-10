@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Poz\Http\Controllers;
+namespace Robert\Poz\Http\Controllers;
 
 use Modules\Reference\Http\Controllers\Controller;
 

@@ -10,8 +10,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Robert\\Poz\\PozServiceProvider",
-                "Robert\\Poz\\PozServiceLoader"
+                "Robert\\Poz\\PozServiceProvider"
             ],
             "aliases": {
                 "Poz": "Robert\\Poz\\Facades\\Poz"

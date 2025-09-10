@@ -2,52 +2,74 @@
 
 namespace Robert\Poz;
 
+use App\Models\Position;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Robert\Poz\AuthServiceProvider;
+use Robert\Poz\RouteServiceProvider;
+use Modules\Account\Models\Employee;
+use Modules\Account\Models\EmployeePosition;
+use Modules\Account\Models\User;
 
 class PozServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
+     * @var string $moduleName
+     */
+    protected $moduleName = 'Poz';
+
+    /**
+     * @var string $moduleNameLower
+     */
+    protected $moduleNameLower = 'poz';
+
+    /**
+     * Register any application services.
+     *
+     * @return void
      */
     public function register()
     {
-        // Merge config dari package ke Laravel config
-        $this->mergeConfigFrom(__DIR__ . '/../config/poz.php', 'poz');
-
-        // Bind Core class ke container
-        $this->app->singleton('poz', function ($app) {
-            return new Core();
-        });
+        $this->mergeConfigFrom(
+            __DIR__ . '/../Config/' . $this->moduleNameLower . '.php',
+            $this->moduleNameLower
+        );
     }
 
     /**
-     * Bootstrap services.
+     * Bootstrap any application services.
+     *
+     * @return void
      */
     public function boot()
     {
-        // // Load routes jika ada
-        // if (file_exists(__DIR__ . '/../routes/web.php')) {
-        //     $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
-        // }
+        $this->app->register(AuthServiceProvider::class);
+        $this->app->register(RouteServiceProvider::class);
+        $this->loadDynamicRelationships();
+        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
 
-        // // Load migrations jika ada
-        // if (is_dir(__DIR__ . '/../database/migrations')) {
-        //     $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
-        // }
 
-        // // Publish config ke folder modules
-        // $this->publishes([
-        //     __DIR__ . '/../config/poz.php' => base_path('modules/Poz/config/poz.php'),
-        // ], 'poz-config');
+        $this->loadViewsFrom(__DIR__ . '/../Resources/Views', $this->moduleNameLower);
+        $this->loadViewsFrom(__DIR__ . '/../Resources/Components', 'x-' . $this->moduleNameLower);
 
-        // // Publish routes ke folder modules
-        // $this->publishes([
-        //     __DIR__ . '/../routes/web.php' => base_path('modules/Poz/Routes/web.php'),
-        // ], 'poz-routes');
+        Blade::componentNamespace('Robert\\' . $this->moduleName . '\\Resources\\Components', $this->moduleNameLower);
+    }
 
-        // // Publish migrations ke folder modules
-        // $this->publishes([
-        //     __DIR__ . '/../database/migrations/' => base_path('modules/Poz/Database/Migrations'),
-        // ], 'poz-migrations');
+    /**
+     * Register dynamic relationships.
+     */
+    public function loadDynamicRelationships()
+    {
+        // User::resolveRelationUsing('employee', function ($user) {
+        //     return $user->hasOne(Employee::class, 'user_id')->withDefault();
+        // });
+
+        // Position::resolveRelationUsing('employees', function ($position) {
+        //     return $position->belongsToMany(Employee::class, 'empl_positions', 'position_id', 'empl_id')->withPivot('id');
+        // });
+
+        // Position::resolveRelationUsing('employeePositions', function ($position) {
+        //     return $position->hasMany(EmployeePosition::class, 'position_id');
+        // });
     }
 }

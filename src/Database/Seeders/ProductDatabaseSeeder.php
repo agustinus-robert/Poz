@@ -29,7 +29,7 @@ class ProductDatabaseSeeder extends Seeder
         DB::statement("SET session_replication_role = 'replica';");
 
         foreach ($sqlFiles as $file) {
-            $path = base_path("modules/Poz/Database/Seeders/sql/{$file}");
+            $path = __DIR__ . "/sql/{$file}";
             if (File::exists($path)) {
                 $sql = File::get($path);
                 DB::unprepared($sql);
