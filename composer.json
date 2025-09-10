@@ -1,0 +1,24 @@
+{
+    "name": "poz",
+    "description": "Poz package for Laravel",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Poz\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Poz\\PozServiceProvider"
+            ],
+            "aliases": {
+                "Poz": "Poz\\Facades\\Poz"
+            }
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": "^10.0"
+    }
+}
