@@ -6,6 +6,9 @@ use App\Models\Position;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Robert\Poz\AuthServiceProvider;
+use Livewire\Livewire;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use Robert\Poz\RouteServiceProvider;
 use Modules\Account\Models\Employee;
 use Modules\Account\Models\EmployeePosition;
@@ -51,6 +54,26 @@ class PozServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__ . '/Resources/Views', $this->moduleNameLower);
         $this->loadViewsFrom(__DIR__ . '/Resources/Components', 'x-' . $this->moduleNameLower);
+
+        $livewirePath = __DIR__ . '/Http/Livewire';
+        $namespace = 'Robert\\Poz\\Http\\Livewire';
+
+        if (File::exists($livewirePath)) {
+            $files = File::allFiles($livewirePath);
+
+            foreach ($files as $file) {
+                $relativePath = str_replace($livewirePath . DIRECTORY_SEPARATOR, '', $file->getPathname());
+                $relativePath = str_replace('.php', '', $relativePath);
+                $class = $namespace . '\\' . str_replace('/', '\\', $relativePath);
+
+                if (class_exists($class)) {
+                    $relativeNamespace = str_replace($namespace . '\\', '', $class);
+                    $parts = explode('\\', $relativeNamespace);
+                    $componentName = 'poz::' . implode('.', array_map(fn($part) => Str::kebab($part), $parts));
+                    Livewire::component($componentName, $class);
+                }
+            }
+        }
 
         Blade::componentNamespace('Robert\\' . $this->moduleName . '\\Resources\\Components', $this->moduleNameLower);
     }
