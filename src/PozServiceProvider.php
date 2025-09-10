@@ -46,11 +46,11 @@ class PozServiceProvider extends ServiceProvider
         $this->app->register(AuthServiceProvider::class);
         $this->app->register(RouteServiceProvider::class);
         $this->loadDynamicRelationships();
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/Database/Migrations');
 
 
-        $this->loadViewsFrom(__DIR__ . '/../Resources/Views', $this->moduleNameLower);
-        $this->loadViewsFrom(__DIR__ . '/../Resources/Components', 'x-' . $this->moduleNameLower);
+        $this->loadViewsFrom(__DIR__ . '/Resources/Views', $this->moduleNameLower);
+        $this->loadViewsFrom(__DIR__ . '/Resources/Components', 'x-' . $this->moduleNameLower);
 
         Blade::componentNamespace('Robert\\' . $this->moduleName . '\\Resources\\Components', $this->moduleNameLower);
     }

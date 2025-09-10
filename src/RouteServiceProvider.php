@@ -37,12 +37,12 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->moduleNamespace)
             ->name('poz::')
             ->prefix('poz')
-            ->group(__DIR__ . '/../Routes/web.php');
+            ->group(__DIR__ . '/Routes/web.php');
 
         Route::middleware('api')
             ->namespace($this->moduleNamespace . '\API')
             ->prefix('api/poz')
             ->name('api::poz.')
-            ->group(__DIR__ . '/../Routes/api.php');
+            ->group(__DIR__ . '/Routes/api.php');
     }
 }
